@@ -41,8 +41,10 @@ class Game {
   turnChange() {
     if (this.turn === 'player1') {
       this.turn = 'player2';
+      updateWhoseTurn(this.player2.token)
     } else {
       this.turn = 'player1';
+      updateWhoseTurn(this.player1.token)
     }
   }
 

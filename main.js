@@ -11,6 +11,7 @@ var gridSpots = document.querySelectorAll('.cell');
 var winnerMsg = document.getElementById('winner-winner');
 var tieMsg = document.getElementById('tie');
 var yourTurn = document.getElementById('your-turn');
+var nextPlayer = document.getElementById('gameboard__turn-indicator')
 var player1Score = document.getElementById('player1-section__wins');
 var player2Score = document.getElementById('player2-section__wins');
 
@@ -60,4 +61,8 @@ function updateScoreBoard(score, winner) {
   } else {
     player2Score.innerText = score;
   }
+}
+
+function updateWhoseTurn(nextPlayerToken) {
+  nextPlayer.setAttribute('src', nextPlayerToken)
 }
