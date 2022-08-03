@@ -68,5 +68,5 @@ img.large {
 }
 
 .hidden {
-  opacity: 0.0;
+  display: none;
 }

@@ -17,6 +17,11 @@ class Game {
     }
   }
 
+  resetSpots() {
+    this.player1.spots = [];
+    this.player2.spots = [];
+  }
+
   checkForWin() {
     if (this.turn === 'player1') {
       var currPlayer = this.player1;
@@ -29,6 +34,7 @@ class Game {
       && currPlayer.spots.includes(winningCombos[i][1])
       && currPlayer.spots.includes(winningCombos[i][2])) {
       heyYouWon(currPlayer);
+      this.resetSpots();
       }
     }
   }
@@ -40,5 +46,7 @@ class Game {
       this.turn = 'player1';
     }
   }
+
+
 
 }

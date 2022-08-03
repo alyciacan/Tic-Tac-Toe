@@ -24,14 +24,15 @@ for (var i = 0; i < gridSpots.length; i++) {
 //EVENT HANDLERS:
 
 function goHere() {
-  //check to see if this spot is already in player's array
   var spot = event.target.closest('.cell');
   var id = spot.id;
-  var marker = document.createElement('img');
-  marker.classList.add("large");
-  currGame.makeAPlay(id, marker, spot);
-  currGame.checkForWin();
-  currGame.turnChange();
+  if (!spot.children.length) {
+    var marker = document.createElement('img');
+    marker.classList.add("large");
+    currGame.makeAPlay(id, marker, spot);
+    currGame.checkForWin();
+    currGame.turnChange();
+  }
 }
 
 function heyYouWon(someone) {
@@ -39,5 +40,15 @@ function heyYouWon(someone) {
   yourTurn.classList.add('hidden');
   winnerMsg.classList.remove('hidden');
   currGame[winner].increaseWins();
-  // startOver();
+  var delay = 1000
+  setTimeout(startOver, delay);
+}
+
+function startOver(){
+  var allMarkers = document.querySelectorAll('.large');
+  for (var i = 0; i < allMarkers.length; i++) {
+    allMarkers[i].remove();
+  }
+  winnerMsg.classList.add('hidden');
+  yourTurn.classList.remove('hidden');
 }
