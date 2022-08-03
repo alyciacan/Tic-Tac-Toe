@@ -48,6 +48,14 @@ img.small {
   width: 75px;
 }
 
+img.medium {
+  width: 110px;
+}
+
+img.large {
+  width: 145px;
+}
+
 .sidebar {
   align-items: baseline;
   background-image: URL("assets/background_image.png");
