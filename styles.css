@@ -32,6 +32,7 @@ h1 {
   flex-direction: column;
   flex-grow: 2;
   justify-content: space-evenly;
+  max-width: 750px;
 }
 
 
@@ -53,7 +54,7 @@ img.medium {
 }
 
 img.large {
-  width: 145px;
+  width: 125px;
 }
 
 .sidebar {
@@ -64,4 +65,8 @@ img.large {
   flex-grow: 1;
   justify-content: center;
   margin-top: 25px;
+}
+
+.hidden {
+  opacity: 0.0;
 }
