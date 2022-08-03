@@ -66,3 +66,7 @@ img.large {
   justify-content: center;
   margin-top: 25px;
 }
+
+.hidden {
+  opacity: 0.0;
+}

@@ -1,6 +1,7 @@
 class Player {
-  constructor(id){
+  constructor(id, playerNum){
     this.id = id;
+    this.playerNum = playerNum;
     this.token = `assets/${id}.svg`;
     this.wins = 0;
     this.spots = [];
@@ -8,5 +9,6 @@ class Player {
 
   increaseWins() {
     this.wins += 1;
+    console.log(this.wins);
   }
 }

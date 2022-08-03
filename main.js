@@ -8,6 +8,9 @@ var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['1', '4
 
 //QUERY SELECTORS:
 var gridSpots = document.querySelectorAll('.cell');
+var winnerMsg = document.getElementById('winner-winner');
+var tieMsg = document.getElementById('tie');
+var yourTurn = document.getElementById('your-turn');
 
 
 //EVENT LISTENERS:
@@ -29,4 +32,12 @@ function goHere() {
   currGame.makeAPlay(id, marker, spot);
   currGame.checkForWin();
   currGame.turnChange();
+}
+
+function heyYouWon(someone) {
+  var winner = someone.playerNum;
+  yourTurn.classList.add('hidden');
+  winnerMsg.classList.remove('hidden');
+  currGame[winner].increaseWins();
+  // startOver();
 }

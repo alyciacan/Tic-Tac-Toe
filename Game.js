@@ -1,7 +1,7 @@
 class Game {
   constructor() {
-    this.player1 = new Player('rocket');
-    this.player2 = new Player('ufo');
+    this.player1 = new Player('rocket', 'player1');
+    this.player2 = new Player('ufo', 'player2');
     this.turn = 'player1';
     this.tie = false;
   }
@@ -28,7 +28,7 @@ class Game {
       if (currPlayer.spots.includes(winningCombos[i][0])
       && currPlayer.spots.includes(winningCombos[i][1])
       && currPlayer.spots.includes(winningCombos[i][2])) {
-      this.heyYouWon();
+      heyYouWon(currPlayer);
       }
     }
   }
@@ -41,7 +41,4 @@ class Game {
     }
   }
 
-  heyYouWon() {
-    
-  }
 }
