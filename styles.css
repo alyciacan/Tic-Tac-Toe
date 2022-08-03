@@ -8,8 +8,16 @@ h2 {
   text-align: center;
 }
 
+h1 {
+  font-size: 250%;
+  font-weight: bold;
+}
+
 .cell {
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main {
@@ -22,18 +30,18 @@ h2 {
 .gameboard {
   display: flex;
   flex-direction: column;
-  flex-grow: 2
+  flex-grow: 2;
   justify-content: space-evenly;
 }
 
 
 .gameboard__grid-container {
-  background-color: #000000;
+  background-image: linear-gradient(#43BDBB, #2B0D44);
   color: black;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 165px 165px 165px;
 }
 
 img.small {
@@ -41,6 +49,7 @@ img.small {
 }
 
 .sidebar {
+  align-items: baseline;
   background-image: URL("assets/background_image.png");
   background-position: center;
   display: flex;
