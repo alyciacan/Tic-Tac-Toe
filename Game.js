@@ -28,7 +28,6 @@ class Game {
     } else {
       var currPlayer = this.player2;
     }
-    console.log(currPlayer.spots)
     for (var i = 0; i < winningCombos.length; i++) {
       if (currPlayer.spots.includes(winningCombos[i][0])
       && currPlayer.spots.includes(winningCombos[i][1])

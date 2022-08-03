@@ -9,5 +9,8 @@ class Player {
 
   increaseWins() {
     this.wins += 1;
+    var score = this.wins;
+    var winner = this.playerNum;
+    updateScoreBoard(score, winner)
   }
 }
