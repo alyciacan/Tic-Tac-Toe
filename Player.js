@@ -1,5 +1,5 @@
 class Player {
-  constructor(id, playerNum){
+  constructor(id, playerNum) {
     this.id = id;
     this.playerNum = playerNum;
     this.token = `assets/${id}.svg`;
@@ -11,6 +11,6 @@ class Player {
     this.wins += 1;
     var score = this.wins;
     var winner = this.playerNum;
-    updateScoreBoard(score, winner)
+    updateScoreBoard(score, winner);
   }
 }
