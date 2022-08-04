@@ -4,6 +4,7 @@ class Game {
     this.player2 = new Player('ufo', 'player2');
     this.turn = 'player1';
     this.tie = false;
+    this.goesFirst = 'player1';
   }
   makeAPlay(id, marker, spot) {
     if (this.turn === 'player1' && !this.player1.spots.includes(id)) {

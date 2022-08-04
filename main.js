@@ -54,7 +54,7 @@ function startOver(){
   for (var i = 0; i < allMarkers.length; i++) {
     allMarkers[i].remove();
   }
-  randomizeFirstTurn();
+  displayWhoGoesFirst();
   winnerMsg.classList.add('hidden');
   tieMsg.classList.add('hidden');
   yourTurn.classList.remove('hidden');
@@ -78,12 +78,13 @@ function itsATie() {
   setTimeout(startOver, delay);
 }
 
-function randomizeFirstTurn() {
-  var coinFlip = Math.floor(Math.random() * 2);
-  if (coinFlip) {
+function displayWhoGoesFirst() {
+  if (currGame.goesFirst === 'player2') {
+    currGame.goesFirst = 'player1';
     currGame.turn = 'player1';
     updateWhoseTurn(currGame.player1.token);
   } else {
+    currGame.goesFirst = 'player2';
     currGame.turn = 'player2';
     updateWhoseTurn(currGame.player2.token);
   }
