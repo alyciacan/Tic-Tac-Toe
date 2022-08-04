@@ -1,6 +1,5 @@
 //GLOBAL VARIABLES:
 var currGame = new Game();
-// var allSpots = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['1', '4', '7'], ['2', '5', '8'],
   ['3', '6', '9'], ['1', '5', '9'], ['3', '5', '7']];
 var delay = 1000
@@ -15,13 +14,13 @@ var yourTurn = document.getElementById('your-turn');
 var nextPlayer = document.getElementById('gameboard__turn-indicator')
 var player1Score = document.getElementById('player1-section__wins');
 var player2Score = document.getElementById('player2-section__wins');
+var winnerImg = document.getElementById('gameboard___winner-img');
 
 
 //EVENT LISTENERS:
 for (var i = 0; i < gridSpots.length; i++) {
   gridSpots[i].addEventListener('click', goHere)
 }
-
 
 
 //EVENT HANDLERS:
@@ -37,10 +36,14 @@ function goHere() {
     currGame.turnChange();
   }
 }
+function updateWinner(winnerToken) {
+  winnerImg.setAttribute('src', winnerToken)
+}
 
 function heyYouWon(someone) {
   var winner = someone.playerNum;
   yourTurn.classList.add('hidden');
+  updateWinner(someone.token);
   winnerMsg.classList.remove('hidden');
   currGame[winner].increaseWins();
   setTimeout(startOver, delay);
@@ -51,6 +54,7 @@ function startOver(){
   for (var i = 0; i < allMarkers.length; i++) {
     allMarkers[i].remove();
   }
+  randomizeFirstTurn();
   winnerMsg.classList.add('hidden');
   tieMsg.classList.add('hidden');
   yourTurn.classList.remove('hidden');
@@ -72,4 +76,15 @@ function itsATie() {
   yourTurn.classList.add('hidden');
   tieMsg.classList.remove('hidden');
   setTimeout(startOver, delay);
+}
+
+function randomizeFirstTurn() {
+  var coinFlip = Math.floor(Math.random() * 2);
+  if (coinFlip) {
+    currGame.turn = 'player1';
+    updateWhoseTurn(currGame.player1.token);
+  } else {
+    currGame.turn = 'player2';
+    updateWhoseTurn(currGame.player2.token);
+  }
 }
