@@ -1,5 +1,5 @@
 # Space Age Tic-Tac-Toe
-🛸 An astronomical take on the OG 3x3 board game with retro vibes. 🚀
+✨ 🛸 🪐  An astronomical take on the OG 3x3 board game with retro vibes. 🌙 🚀 ✨ 
 
 *********
 
@@ -16,7 +16,7 @@ Play remotely or via Zoom using [remote screen control](https://support.zoom.us/
 * HTML
 
 ## Features
-* Classic Tic-Tac-Toe rules apply, so a "win" can be horizontal, vertical, or diagonal. Users cannot select a space that is already occupied.    .
+* Classic Tic-Tac-Toe rules apply, so a "win" can be horizontal, vertical, or diagonal. Users cannot select a space that is already occupied.    
 * Players' scores are displayed and updated automatically.   
 * Gameboard resets automatically following each win or tie.
 * Instructions are clearly displayed and update as each player takes their turn.      
@@ -47,7 +47,7 @@ Alycia Canavan
 * I really wanted to add CSS breakpoints that would allow for my game to be played on mobile devices, but decided to "put a pin in" that idea, at least until we learn how it's done!
 
 
-## Shoutouts
+## Shoutouts 📣 
 * First to my Project Manager, Leta, for fielding my multiple questions about just how far I could deviate from the comp.
 * Second to my family, for not being (visibly) embarrassed or exasperated when I spent a whole dinner date talking through how to tell a computer how Tic-Tac-Toe works.    
 * Third to my fabulous mentor, Meg, who is always terrifically supportive and agreed to help me with my refactor!   
