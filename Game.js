@@ -16,12 +16,10 @@ class Game {
     spot.appendChild(marker);
     }
   }
-
   resetSpots() {
     this.player1.spots = [];
     this.player2.spots = [];
   }
-
   checkForWin() {
     if (this.turn === 'player1') {
       var currPlayer = this.player1;
@@ -36,18 +34,18 @@ class Game {
       this.resetSpots();
       }
     }
+    if (this.player1.spots.length === 5 || this.player2.spots.length === 5) {
+      this.resetSpots();
+      itsATie();
+    }
   }
-
   turnChange() {
     if (this.turn === 'player1') {
       this.turn = 'player2';
-      updateWhoseTurn(this.player2.token)
+      updateWhoseTurn(this.player2.token);
     } else {
       this.turn = 'player1';
-      updateWhoseTurn(this.player1.token)
+      updateWhoseTurn(this.player1.token);
     }
   }
-
-
-
 }

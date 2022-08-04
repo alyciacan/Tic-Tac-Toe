@@ -3,6 +3,7 @@ var currGame = new Game();
 // var allSpots = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['1', '4', '7'], ['2', '5', '8'],
   ['3', '6', '9'], ['1', '5', '9'], ['3', '5', '7']];
+var delay = 1000
 
 
 
@@ -42,7 +43,6 @@ function heyYouWon(someone) {
   yourTurn.classList.add('hidden');
   winnerMsg.classList.remove('hidden');
   currGame[winner].increaseWins();
-  var delay = 1000
   setTimeout(startOver, delay);
 }
 
@@ -52,6 +52,7 @@ function startOver(){
     allMarkers[i].remove();
   }
   winnerMsg.classList.add('hidden');
+  tieMsg.classList.add('hidden');
   yourTurn.classList.remove('hidden');
 }
 
@@ -64,5 +65,11 @@ function updateScoreBoard(score, winner) {
 }
 
 function updateWhoseTurn(nextPlayerToken) {
-  nextPlayer.setAttribute('src', nextPlayerToken)
+  nextPlayer.setAttribute('src', nextPlayerToken);
+}
+
+function itsATie() {
+  yourTurn.classList.add('hidden');
+  tieMsg.classList.remove('hidden');
+  setTimeout(startOver, delay);
 }
