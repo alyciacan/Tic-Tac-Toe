@@ -24,18 +24,19 @@ Play remotely or via Zoom using [remote screen control](https://support.zoom.us/
 * Alt text added for increased accessibility.
 
 ## Images
+![alt text](https://user-images.githubusercontent.com/105533317/182959719-3c4e9e8e-0de5-4ccd-ba70-a0f04233ebb1.png "Screenshot of Space Age Tic Tac Toe")
 
 
 ## Deploy Link
-****
+(to be added)
 
 
 ## Developer
-****
-Alycia Canavan [LinkedIn](www.linkedin.com/in/alycia-canavan) [GitHub](https://github.com/alyciacan)
+Alycia Canavan 
+* [LinkedIn](www.linkedin.com/in/alycia-canavan)    
+* [GitHub](https://github.com/alyciacan)    
 
 ## About this Project
-****
   A student in the [Turing](https://turing.edu/) Front-End program, I completed this project during my *fifth* week of being a developer (Mod 1, in Turing-speak). This was our end-of-mod solo assignment, and I had a *blast* (🚀 pun very much intended) building this out on my own. In case you're interested, [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html) are the project specs. I used the Git workflow, which is making more and more sense to me as I get more practice!
 
 ## Wins and Challenges
