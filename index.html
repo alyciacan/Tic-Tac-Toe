@@ -8,14 +8,14 @@
   <body class="main">
     <section class="player1-section sidebar">
       <div class="player1-section__content">
-        <img class="player1-section__img small" src="assets/rocket.svg" alt="Cartoon rocketship">
-        <h2><span class="player1-section__wins">0</span> wins</h2>
+        <img class="player1-section__img medium" src="assets/rocket.svg" alt="Cartoon rocketship">
+        <h2><span id="player1-section__wins">0</span> wins</h2>
       </div>
     </section>
     <section class="gameboard">
       <div class="gameboard__instructions">
-        <h1 id="your-turn">It's your turn!</h1>
-        <h1 id="winner-winner" class="hidden">Someone won!</h1>
+        <h1 id="your-turn">It's <img id="gameboard__turn-indicator" class="small" src="assets/rocket.svg" alt="Cartoon rocketship">'s turn!</h1>
+        <h1 id="winner-winner" class="hidden"><img id="gameboard___winner-img"  class="small" src="assets/rocket.svg" alt="Cartoon rocketship">won!</h1>
         <h1 id="tie" class="hidden">It's a tie!</h1>
       </div>
       <div class="gameboard__grid-container">
@@ -32,8 +32,8 @@
     </section>
     <section class="player2-section sidebar">
       <div class="player2-section__content">
-        <img class="player2-section__img small" src="assets/ufo.svg" alt="Cartoon UFO">
-        <h2><span class="player2-section__wins">0</span> wins</h2>
+        <img class="player2-section__img medium" src="assets/ufo.svg" alt="Cartoon UFO">
+        <h2><span id="player2-section__wins">0</span> wins</h2>
       </div>
     </section>
     <script type="text/javascript" src="Game.js"></script>
