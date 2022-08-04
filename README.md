@@ -37,10 +37,10 @@ Alycia Canavan
 * [GitHub](https://github.com/alyciacan)    
 
 ## About this Project
-  A student in the [Turing](https://turing.edu/) Front-End program, I completed this project during my *fifth* week of being a developer (Mod 1, in Turing-speak). This was our end-of-mod solo assignment, and I had a *blast* (🚀 pun very much intended) building this out on my own. In case you're interested, [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html) are the project specs. I used the Git workflow, which is making more and more sense to me as I get more practice!
+  A student in the [Turing](https://turing.edu/) Front-End program, I completed this project during my fifth week of being a developer (Mod 1, in Turing-speak). This was our end-of-mod solo assignment, and I had a **blast** (🚀 pun very much intended) building this out on my own. In case you're interested, [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html) are the project specs. I used the Git workflow, which is making more and more sense to me as I get more practice!
 
 ## Wins and Challenges
-* I was really excited to get the chance to plan this undertaking on my own. I used [Trello] (https://trello.com/alyciacanavan/boards) to organize my work, set deadlines for myself, and add "to dos" as I went. I sketched out my HTML "skeleton" by hand before doing any coding. I also used Replit to "test" my ideas for gameplay functionality.    
+* I was really excited to get the chance to plan this undertaking on my own. I used [Trello](https://trello.com/alyciacanavan/boards) to organize my work, set deadlines for myself, and add "to dos" as I went. I sketched out my HTML "skeleton" by hand before doing any coding. I also used Replit to "test" my ideas for gameplay functionality.    
 * The functionality and design came together for me quickly, which allowed me to focus a good amount of time on my refactor. I used Turing's Style Guides to refactor my JS, CSS, and HTML. I also employed the BEM naming convention when writing my HTML.     
 * I also added some pizzazz to my project, including alt text for accessibility and animation.    
 * One challenge I encountered was the balance between responsive and reliable CSS. Let me explain - I 💜 Flexbox, and would gladly use it for everything. But sometimes dimensions just need to be hard-coded, and I am learning when to flex and when to be more hard-headed.
