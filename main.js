@@ -2,9 +2,7 @@
 var currGame = new Game();
 var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['1', '4', '7'], ['2', '5', '8'],
   ['3', '6', '9'], ['1', '5', '9'], ['3', '5', '7']];
-var delay = 1000
-
-
+var delay = 1000;
 
 //QUERY SELECTORS:
 var gridSpots = document.querySelectorAll('.cell');
@@ -16,12 +14,10 @@ var player1Score = document.getElementById('player1-section__wins');
 var player2Score = document.getElementById('player2-section__wins');
 var winnerImg = document.getElementById('gameboard___winner-img');
 
-
 //EVENT LISTENERS:
 for (var i = 0; i < gridSpots.length; i++) {
   gridSpots[i].addEventListener('click', goHere)
 }
-
 
 //EVENT HANDLERS:
 
