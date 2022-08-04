@@ -3,7 +3,7 @@ var currGame = new Game();
 var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'],
 ['1', '4', '7'], ['2', '5', '8'], ['3', '6', '9'], ['1', '5', '9'],
 ['3', '5', '7']];
-var delay = 1000;
+var delay = 1050;
 
 //QUERY SELECTORS:
 var gridSpots = document.querySelectorAll('.cell');
@@ -18,7 +18,7 @@ var yourTurn = document.getElementById('your-turn');
 //EVENT LISTENERS:
 for (var i = 0; i < gridSpots.length; i++) {
   gridSpots[i].addEventListener('click', placeMarker)
-}
+};
 
 //EVENT HANDLERS:
 function placeMarker() {
@@ -30,38 +30,38 @@ function placeMarker() {
     marker.classList.add('large');
     currGame.makeAPlay(id, marker, spot);
   }
-}
+};
 
-function heyYouWon(someone) {
-  var winner = someone.playerNum;
-  yourTurn.classList.add('hidden');
-  updateWinner(someone.token);
-  winnerMsg.classList.remove('hidden');
+function heyYouWon(player) {
+  var winner = player.playerNum;
+  makeHidden(yourTurn);
+  updateWinner(player.token);
+  unHide(winnerMsg);
   currGame[winner].increaseWins();
   setTimeout(startOver, delay);
-}
+};
 
 function updateWinner(winnerToken) {
-  winnerImg.setAttribute('src', winnerToken;
-}
+  winnerImg.setAttribute('src', winnerToken)
+};
 
 function itsATie() {
-  yourTurn.classList.add('hidden');
-  tieMsg.classList.remove('hidden');
+  makeHidden(yourTurn);
+  unHide(tieMsg);
   setTimeout(startOver, delay);
-}
+};
 
 function startOver(){
   var allMarkers = document.querySelectorAll('.large');
   for (var i = 0; i < allMarkers.length; i++) {
     allMarkers[i].remove();
-  }
+  };
 
   displayWhoGoesFirst();
-  winnerMsg.classList.add('hidden');
-  tieMsg.classList.add('hidden');
-  yourTurn.classList.remove('hidden');
-}
+  makeHidden(winnerMsg);
+  makeHidden(tieMsg);
+  unHide(yourTurn);
+};
 
 function displayWhoGoesFirst() {
   if (currGame.goesFirst === 'player2') {
@@ -73,11 +73,11 @@ function displayWhoGoesFirst() {
     currGame.turn = 'player2';
     updateWhoseTurn(currGame.player2.token);
   }
-}
+};
 
 function updateWhoseTurn(nextPlayerToken) {
   nextPlayer.setAttribute('src', nextPlayerToken);
-}
+};
 
 function updateScoreBoard(score, winner) {
   if (winner === 'player1') {
@@ -85,4 +85,12 @@ function updateScoreBoard(score, winner) {
   } else {
     player2Score.innerText = score;
   }
-}
+};
+
+function makeHidden(element) {
+  element.classList.add('hidden');
+};
+
+function unHide(element) {
+  element.classList.remove('hidden');
+};

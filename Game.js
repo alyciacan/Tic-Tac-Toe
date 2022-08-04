@@ -5,7 +5,7 @@ class Game {
     this.turn = 'player1';
     this.tie = false;
     this.goesFirst = 'player1';
-  }
+  };
 
   makeAPlay(id, marker, spot) {
     if (this.turn === 'player1' && !this.player1.spots.includes(id)) {
@@ -16,17 +16,18 @@ class Game {
       this.player2.spots.push(id);
       marker.src = 'assets/ufo.svg';
       spot.appendChild(marker);
-    }
+    };
+
     this.checkForWin();
     this.turnChange();
-  }
+  };
 
   checkForWin() {
     if (this.turn === 'player1') {
       var currPlayer = this.player1;
     } else {
       var currPlayer = this.player2;
-    }
+    };
 
     for (var i = 0; i < winningCombos.length; i++) {
       if (currPlayer.spots.includes(winningCombos[i][0])
@@ -35,13 +36,13 @@ class Game {
       heyYouWon(currPlayer);
       this.resetSpots();
       }
-    }
+    };
 
     if (this.player1.spots.length === 5 || this.player2.spots.length === 5) {
       this.resetSpots();
       itsATie();
     }
-  }
+  };
 
   turnChange() {
     if (this.turn === 'player1') {
@@ -51,11 +52,10 @@ class Game {
       this.turn = 'player1';
       updateWhoseTurn(this.player1.token);
     }
-  }
+  };
 
   resetSpots() {
     this.player1.spots = [];
     this.player2.spots = [];
-  }
-
+  };
 }
