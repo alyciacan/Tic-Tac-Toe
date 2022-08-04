@@ -47,10 +47,10 @@ class Game {
   turnChange() {
     if (this.turn === 'player1') {
       this.turn = 'player2';
-      updateWhoseTurn(this.player2.token);
+      updateWhoseTurn(this.player2.token, 'ufo cartoon');
     } else {
       this.turn = 'player1';
-      updateWhoseTurn(this.player1.token);
+      updateWhoseTurn(this.player1.token, 'rocket cartoon');
     }
   };
 

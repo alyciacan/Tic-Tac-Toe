@@ -5,6 +5,7 @@ class Player {
     this.token = `assets/${id}.svg`;
     this.wins = 0;
     this.spots = [];
+    this.altText = `${id} cartoon`
   }
 
   increaseWins() {

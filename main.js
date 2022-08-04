@@ -35,14 +35,15 @@ function placeMarker() {
 function heyYouWon(player) {
   var winner = player.playerNum;
   makeHidden(yourTurn);
-  updateWinner(player.token);
+  updateWinner(player.token, player.altText);
   unHide(winnerMsg);
   currGame[winner].increaseWins();
   setTimeout(startOver, delay);
 };
 
-function updateWinner(winnerToken) {
-  winnerImg.setAttribute('src', winnerToken)
+function updateWinner(winnerToken, altText) {
+  winnerImg.setAttribute('src', winnerToken);
+  winnerImg.setAttribute('alt', altText);
 };
 
 function itsATie() {
@@ -75,8 +76,9 @@ function displayWhoGoesFirst() {
   }
 };
 
-function updateWhoseTurn(nextPlayerToken) {
+function updateWhoseTurn(nextPlayerToken, altText) {
   nextPlayer.setAttribute('src', nextPlayerToken);
+  nextPlayer.setAttribute('alt', altText);
 };
 
 function updateScoreBoard(score, winner) {
