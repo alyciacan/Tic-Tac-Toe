@@ -5,6 +5,8 @@ var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'],
 ['3', '5', '7']];
 var delay = 1050;
 
+//MEG - looks like winning combos is only used within one function in the game class. Is there another way to implement it without being a global variable?
+
 //QUERY SELECTORS:
 var gridSpots = document.querySelectorAll('.cell');
 var nextPlayer = document.getElementById('gameboard__turn-indicator')
@@ -19,6 +21,8 @@ var yourTurn = document.getElementById('your-turn');
 for (var i = 0; i < gridSpots.length; i++) {
   gridSpots[i].addEventListener('click', placeMarker)
 };
+
+//MEG - since your're pacing the event in the event listener, consider using an anonymous function to pass it as an argument. JS lets us get away with NOT doing that, but I believe best practice would be to be sure to pass the event itself
 
 //EVENT HANDLERS:
 function placeMarker() {
