@@ -1,8 +1,5 @@
 //GLOBAL VARIABLES:
 var currGame = new Game();
-var winningCombos = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'],
-['1', '4', '7'], ['2', '5', '8'], ['3', '6', '9'], ['1', '5', '9'],
-['3', '5', '7']];
 var delay = 1050;
 
 //QUERY SELECTORS:
@@ -20,7 +17,7 @@ for (var i = 0; i < gridSpots.length; i++) {
   gridSpots[i].addEventListener('click', placeMarker)
 };
 
-//EVENT HANDLERS:
+//FUNCTIONS:
 function placeMarker() {
   var spot = event.target.closest('.cell');
   var id = spot.id;
@@ -32,7 +29,7 @@ function placeMarker() {
   }
 };
 
-function heyYouWon(player) {
+function declareWinner(player) {
   var winner = player.playerNum;
   makeHidden(yourTurn);
   updateWinner(player.token, player.altText);
@@ -46,10 +43,10 @@ function updateWinner(winnerToken, altText) {
   winnerImg.setAttribute('alt', altText);
 };
 
-function itsATie() {
+function declareATie() {
   makeHidden(yourTurn);
   unHide(tieMsg);
-  setTimeout(startOver, delay);
+  // setTimeout(startOver, delay);
 };
 
 function startOver(){
