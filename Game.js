@@ -61,4 +61,4 @@ class Game {
     this.player1.spots = [];
     this.player2.spots = [];
   };
-}
+};

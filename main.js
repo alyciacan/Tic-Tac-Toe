@@ -1,6 +1,6 @@
 //GLOBAL VARIABLES:
 var currGame = new Game();
-var delay = 1050;
+var delay = 1150;
 
 //QUERY SELECTORS:
 var gridSpots = document.querySelectorAll('.cell');
@@ -46,7 +46,7 @@ function updateWinner(winnerToken, altText) {
 function declareATie() {
   makeHidden(yourTurn);
   unHide(tieMsg);
-  // setTimeout(startOver, delay);
+  setTimeout(startOver, delay);
 };
 
 function startOver(){
