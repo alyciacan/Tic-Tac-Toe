@@ -23,8 +23,8 @@ Play remotely or via Zoom using [remote screen control](https://support.zoom.us/
 * Alt text added for increased accessibility.
 
 ## Video
-My daughter Maggie helped me with my demonstration. Enjoy!
-https://user-images.githubusercontent.com/105533317/183779624-bce7d108-5efa-452a-813a-740a35870cde.mp4
+My daughter Maggie helped me with my demonstration. Enjoy!      
+https://user-images.githubusercontent.com/105533317/183779624-bce7d108-5efa-452a-813a-740a35870cde.mp4     
 
 ## Deploy Link
 (to be added)
