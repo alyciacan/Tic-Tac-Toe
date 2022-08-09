@@ -22,8 +22,9 @@ Play remotely or via Zoom using [remote screen control](https://support.zoom.us/
 * Fun animation when a player has won.    
 * Alt text added for increased accessibility.
 
-## Screenshot
-![alt text](https://user-images.githubusercontent.com/105533317/182959719-3c4e9e8e-0de5-4ccd-ba70-a0f04233ebb1.png "Screenshot of Space Age Tic Tac Toe")
+## Video
+My daughter Maggie helped me with my demonstration. Enjoy!
+https://user-images.githubusercontent.com/105533317/183779624-bce7d108-5efa-452a-813a-740a35870cde.mp4
 
 ## Deploy Link
 (to be added)
@@ -47,6 +48,11 @@ Alycia Canavan
 * I also added some pizzazz to my project, including alt text for accessibility and animation.    
 * One challenge I encountered was the balance between responsive and reliable CSS. Let me explain - I 💜 Flexbox, and would gladly use it for everything. But sometimes dimensions just need to be hard-coded, and I am learning when to flex and when to be more hard-headed.
 * I really wanted to add CSS breakpoints that would allow for my game to be played on mobile devices, but decided to "put a pin in" that idea, at least until we learn how it's done!
+
+## Future Features
+* CSS breakpoints to allow gameplay on mobile devices
+* Allow users to select from a range of tokens
+* Allow users to select different game play rules (e.g., Tic Tac No)
 
 ## Shoutouts 📣 
 * First to my Project Manager, Leta, for fielding my multiple questions about just how far I could deviate from the comp.
