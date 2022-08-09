@@ -24,7 +24,7 @@ Play remotely or via Zoom using [remote screen control](https://support.zoom.us/
 
 ## Video
 My daughter Maggie helped me with my demonstration. Enjoy!      
-https://user-images.githubusercontent.com/105533317/183779624-bce7d108-5efa-452a-813a-740a35870cde.mp4     
+[!Tic Tac Toe Demo](https://user-images.githubusercontent.com/105533317/183779624-bce7d108-5efa-452a-813a-740a35870cde.mp4)          
 
 ## Deploy Link
 (to be added)
