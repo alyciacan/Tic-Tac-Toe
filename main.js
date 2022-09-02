@@ -13,9 +13,8 @@ var winnerMsg = document.getElementById('winner-winner');
 var yourTurn = document.getElementById('your-turn');
 
 //EVENT LISTENERS:
-for (var i = 0; i < gridSpots.length; i++) {
-  gridSpots[i].addEventListener('click', placeMarker)
-};
+gridSpots.forEach(element => element.addEventListener('click', placeMarker));
+
 
 //FUNCTIONS:
 function placeMarker() {
@@ -51,9 +50,7 @@ function declareATie() {
 
 function startOver(){
   var allMarkers = document.querySelectorAll('.large');
-  for (var i = 0; i < allMarkers.length; i++) {
-    allMarkers[i].remove();
-  };
+  allMarkers.forEach(marker => marker.remove());
 
   displayWhoGoesFirst();
   makeHidden(winnerMsg);

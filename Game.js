@@ -11,11 +11,11 @@ class Game {
   };
 
   makeAPlay(id, marker, spot) {
-    if (this.turn === 'player1' && !this.player1.spots.includes(id)) {
+    if (this.turn === 'player1') {
       this.player1.spots.push(id);
       marker.src = 'assets/rocket.svg';
       spot.appendChild(marker);
-    } else if (this.turn === 'player2' && !this.player2.spots.includes(id)) {
+    } else if (this.turn === 'player2') {
       this.player2.spots.push(id);
       marker.src = 'assets/ufo.svg';
       spot.appendChild(marker);
