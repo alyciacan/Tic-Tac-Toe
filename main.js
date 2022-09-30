@@ -1,6 +1,8 @@
 //GLOBAL VARIABLES:
 var currGame = new Game();
 var delay = 1150;
+let scoresToStore = {player1: 0, player2: 0}
+let parsedScores;
 
 //QUERY SELECTORS:
 var gridSpots = document.querySelectorAll('.cell');
@@ -11,12 +13,28 @@ var tieMsg = document.getElementById('tie');
 var winnerImg = document.getElementById('gameboard___winner-img');
 var winnerMsg = document.getElementById('winner-winner');
 var yourTurn = document.getElementById('your-turn');
+var resetBtn = document.getElementById('reset-scores');
 
 //EVENT LISTENERS:
 gridSpots.forEach(element => element.addEventListener('click', placeMarker));
-
+window.addEventListener('load', getScores);
+resetBtn.addEventListener('click', resetScores);
 
 //FUNCTIONS:
+//add a Fn to check scores and render from localStorage
+function resetScores() {
+  localStorage.clear();
+  scoresToStore = { player1: 0, player2: 0 }
+  renderExistingScores(scoresToStore);
+};
+
+function getScores() {
+  const scores = localStorage.getItem('ScoreObj');
+  const data = scores ? JSON.parse(scores) : scoresToStore;
+  renderExistingScores(data);
+  scoresToStore = data;
+}
+
 function placeMarker() {
   var spot = event.target.closest('.cell');
   var id = spot.id;
@@ -75,12 +93,24 @@ function updateWhoseTurn(nextPlayerToken, altText) {
   nextPlayer.setAttribute('alt', altText);
 };
 
-function updateScoreBoard(score, winner) {
-  if (winner === 'player1') {
-    player1Score.innerText = score;
-  } else {
-    player2Score.innerText = score;
-  }
+function renderExistingScores(data) {
+  console.log('hi');
+  player1Score.innerText = data.player1;
+  player2Score.innerText = data.player2;
+};
+
+function updateScoreBoard() {
+    player1Score.innerText = scoresToStore.player1;
+    player2Score.innerText = scoresToStore.player2;
+};
+
+function updateScoresLocally(player) {
+  scoresToStore[player] += 1;
+  const stringifiedScore = JSON.stringify(scoresToStore);
+  localStorage.setItem('ScoreObj', stringifiedScore);
+  const retrievedScores = localStorage.getItem('ScoreObj');
+  console.log(JSON.parse(retrievedScores));
+  return JSON.parse(retrievedScores);
 };
 
 function makeHidden(element) {

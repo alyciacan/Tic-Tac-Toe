@@ -12,6 +12,6 @@ class Player {
     this.wins += 1;
     var score = this.wins;
     var winner = this.playerNum;
-    updateScoreBoard(score, winner);
+    updateScoreBoard(updateScoresLocally(this.playerNum));
   };
 };
