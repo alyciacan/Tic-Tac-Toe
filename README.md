@@ -35,7 +35,8 @@ My daughter Maggie helped me with my demonstration. Enjoy!
 3. View and play Space-Age Tic Tac Toe in the browser by running 'open index.html' in your terminal!
 
 ## Developer
-Alycia Canavan 
+Alycia Canavan       
+* alycia.canavan@gmail.com         
 * [LinkedIn](www.linkedin.com/in/alycia-canavan)    
 * [GitHub](https://github.com/alyciacan)    
 
@@ -47,7 +48,10 @@ Alycia Canavan
 * The functionality and design came together for me quickly, which allowed me to focus a good amount of time on my refactor. I used Turing's Style Guides to refactor my JS, CSS, and HTML. I also employed the BEM naming convention when writing my HTML.     
 * I also added some pizzazz to my project, including alt text for accessibility and animation.    
 * One challenge I encountered was the balance between responsive and reliable CSS. Let me explain - I 💜 Flexbox, and would gladly use it for everything. But sometimes dimensions just need to be hard-coded, and I am learning when to flex and when to be more hard-headed.
-* I really wanted to add CSS breakpoints that would allow for my game to be played on mobile devices, but decided to "put a pin in" that idea, at least until we learn how it's done!
+* I really wanted to add CSS breakpoints that would allow for my game to be played on mobile devices, but decided to "put a pin in" that idea, at least until we learn how it's done!       
+
+__Added 9/2022:__
+* I revisited this project during the intermission between Mods 2 and 3 to add a local storage feature, so that players' scores persist across page refreshes. This wasn't something we were taught, so it required some self-study.       
 
 ## Future Features
 * CSS breakpoints to allow gameplay on mobile devices
