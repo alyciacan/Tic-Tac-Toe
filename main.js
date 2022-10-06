@@ -94,7 +94,6 @@ function updateWhoseTurn(nextPlayerToken, altText) {
 };
 
 function renderExistingScores(data) {
-  console.log('hi');
   player1Score.innerText = data.player1;
   player2Score.innerText = data.player2;
 };
