@@ -59,7 +59,7 @@ button {
   border-radius: 25px;
   color: white;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   top: 80%;
 }
 
